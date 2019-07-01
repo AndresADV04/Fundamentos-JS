@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clase39 - Memoizacion</title>
+</head>
+
+<body>
+    <script>
+        /*
+           !6 = 6 * 5 * 4 ... * 1
+           !12 = 12 * 11 * 10 * 9 ... * 1
+        */
+
+        function factorial(n) {
+
+            if (!this.cache) {
+                this.cache = {}
+            }
+            debugger
+            if (this.cache[n]) {
+                return this.cache[n]
+            }
+
+            if (n === 1) {
+                return 1
+            }
+            this.cache[n] = n * factorial(n - 1)
+            debugger
+            return this.cache[n]
+        }
+
+        //6 * factorial ( 5 ) * factorial (4)
+    </script>
+</body>
+
+</html>

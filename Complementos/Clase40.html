@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clase40 - Clousures</title>
+</head>
+
+<body>
+    <script>
+         function crearSaludo(finalDeFrase){
+             return function(nombre){
+                console.log(`Hola ${nombre} ${finalDeFrase}`)
+             }
+         }
+
+
+         const SALUDO_ARGENTINO = crearSaludo('che')
+         const SALUDO_MEXICANO = crearSaludo('wey')
+         const SALUDO_COLOMBIANO = crearSaludo('amigo')
+
+
+         SALUDO_ARGENTINO('William')
+         SALUDO_MEXICANO('William')
+         SALUDO_COLOMBIANO('William')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clase36 - Var,Let,Const</title>
+</head>
+
+<body>
+    <script>
+
+        var william = {
+            nombre: 'william',
+            apellido: 'Garcia',
+            edad: 20
+        }
+
+        function esMayorDeEdad(persona) {
+            let mensaje
+            const MAYORIA_DE_EDAD = 18
+            MAYORIA_DE_EDAD = 21
+            if (persona.edad >= MAYORIA_DE_EDAD) {
+                 mensaje = 'Es mayor de edad'
+            } else {
+                 mensaje = 'Es menor de edad'
+            }
+            console.log(mensaje)
+
+        }
+
+        //esMayorDeEdad(william)
+        //let reduce el alcance de la variable al bloque donde se declara
+
+        for(let i = 0; i < 10 ; i++){
+            console.log(i)
+        }
+
+        console.log(`Termino el for el valor de i es ${i}`)
+
+
+    </script>
+</body>
+
+</html>
